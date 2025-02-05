@@ -56,8 +56,8 @@ class NfcManager {
 
   // Constants, by the lack of ES7 we do it with getters
   get MIFARE_BLOCK_SIZE() { return NativeNfcManager.MIFARE_BLOCK_SIZE };
-	get MIFARE_ULTRALIGHT_PAGE_SIZE() { return NativeNfcManager.MIFARE_ULTRALIGHT_PAGE_SIZE };
-	get MIFARE_ULTRALIGHT_TYPE() { return NativeNfcManager.MIFARE_ULTRALIGHT_TYPE };
+  get MIFARE_ULTRALIGHT_PAGE_SIZE() { return NativeNfcManager.MIFARE_ULTRALIGHT_PAGE_SIZE };
+  get MIFARE_ULTRALIGHT_TYPE() { return NativeNfcManager.MIFARE_ULTRALIGHT_TYPE };
 	get MIFARE_ULTRALIGHT_TYPE_C() { return NativeNfcManager.MIFARE_ULTRALIGHT_TYPE_C };
 	get MIFARE_ULTRALIGHT_TYPE_UNKNOWN() { return NativeNfcManager.MIFARE_ULTRALIGHT_TYPE_UNKNOWN };
 
@@ -673,8 +673,7 @@ class NfcManager {
 
   getMaxTransceiveLength() {
     if (Platform.OS === 'ios') {
-      return Promise.reject('not implemented');
-    }
+   eturn Pr
 
     return new Promise((resolve, reject) => {
       NativeNfcManager.getMaxTransceiveLength((err, result) => {
